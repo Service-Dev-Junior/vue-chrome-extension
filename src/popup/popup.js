@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import App from './App';
-import store from '../store';
-import router from './router';
+import Vue from 'vue'
+import App from './App'
+import store from '../store'
+import router from './router'
 
 /* eslint-disable no-new */
 new Vue({
@@ -9,4 +9,4 @@ new Vue({
   store,
   router,
   render: h => h(App),
-});
+})

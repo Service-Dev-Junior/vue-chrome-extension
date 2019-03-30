@@ -1,8 +1,12 @@
-import PageIndex from './pages/Index'
+import { UrlShortener, SecurityUsb } from './pages/index'
 
 export default [
   {
     path: '/',
-    component: PageIndex,
+    component: SecurityUsb,
+  },
+  {
+    path: '/shortener',
+    component: UrlShortener,
   }
 ]

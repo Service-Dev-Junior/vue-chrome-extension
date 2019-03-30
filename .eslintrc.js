@@ -29,7 +29,7 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'comma-dangle': [ 'error', {
+    'comma-dangle': ['error', {
       'arrays': 'never',
       'objects': 'always-multiline',
       'imports': 'never',
@@ -37,6 +37,6 @@ module.exports = {
       'functions': 'never'
     }],
     'space-in-parens': ['error', 'never'],
-    'indent': [ 'error', 2 ],
+    'indent': ['error', 2],
   }
 }
