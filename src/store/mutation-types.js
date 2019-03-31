@@ -1,1 +1,2 @@
-export const UPDATE_FOO = 'UPDATE_FOO';
+export const UPDATE_EMAIL = 'UPDATE_EMAIL'
+export const UPDATE_SECRET_KEY = 'UPDATE_SECRET_KEY'

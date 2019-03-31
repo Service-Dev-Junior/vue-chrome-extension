@@ -1,12 +1,12 @@
-import { UrlShortener, SecurityUsb } from './pages/index'
+import { Settings, Main } from './pages/index'
 
 export default [
   {
     path: '/',
-    component: SecurityUsb,
+    component: Main,
   },
   {
-    path: '/shortener',
-    component: UrlShortener,
+    path: '/settings',
+    component: Settings,
   }
 ]

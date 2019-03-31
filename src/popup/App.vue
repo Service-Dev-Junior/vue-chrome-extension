@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card width="500px" height="300px" flat>
+    <v-card width="400px" height="300px" flat>
       <router-view></router-view>
       <BottomNavBar></BottomNavBar>
     </v-card>

@@ -8,7 +8,6 @@
       <v-btn
         color="teal"
         flat
-        value="recent"
         to="/"
       >
         <span>USB</span>
@@ -18,11 +17,10 @@
       <v-btn
         color="teal"
         flat
-        value="favorites"
-        to="/shortener"
+        to="/settings"
       >
-        <span>Shortener</span>
-        <v-icon>transform</v-icon>
+        <span>Settings</span>
+        <v-icon>settings</v-icon>
       </v-btn>
     </v-bottom-nav>
   </div>
@@ -31,10 +29,5 @@
 <script>
 export default {
   name: 'BottomNavBar',
-  data () {
-    return {
-      bottomNav: 'recent',
-    }
-  },
 }
 </script>

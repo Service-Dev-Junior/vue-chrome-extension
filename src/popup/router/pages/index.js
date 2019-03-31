@@ -1,4 +1,4 @@
-import SecurityUsb from './SecurityUsb'
-import UrlShortener from './UrlShortener'
+import Main from './Main'
+import Settings from './Settings'
 
-export { SecurityUsb, UrlShortener }
+export { Main, Settings }
