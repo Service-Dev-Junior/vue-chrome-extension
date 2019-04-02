@@ -31,19 +31,35 @@
 </template>
 
 <script>
+import { mapMutations, mapActions } from 'vuex'
+
 export default {
+  created () {
+    this.loadSettings()
+  },
   data () {
     return {
-      secretKey: '',
+      secretKey: 'test',
       email: '',
     }
   },
   methods: {
+    ...mapMutations([
+      'UPDATE_EMAIL',
+      'UPDATE_SECRET_KEY'
+    ]),
+    ...mapActions([
+      'loadSettings'
+    ]),
     updateSecretKey () {
-      console.log(this.secretKey)
+      //this.UPDATE_SECRET_KEY(this.secretKey)
     },
     updateEmail () {
-      console.log(this.email)
+      alert(this.secretKey)
+      chrome.storage.sync.set({ value: 'test' }, function () {
+        // 저장 완료
+      })
+      //this.UPDATE_EMAIL('asdsadasdsadas')
     },
   },
 }
