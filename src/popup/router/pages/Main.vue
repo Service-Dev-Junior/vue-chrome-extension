@@ -1,4 +1,4 @@
-<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+<template>
   <div class="headline text-xs-center pa-5">
     <div>
       <v-tooltip bottom>
@@ -17,9 +17,18 @@
         label="USB 사용목적"
         value=""
       ></v-textarea>
-      <v-btn @click.prevent="start" color="success">사용하기</v-btn>
-      <v-btn @click.prevent="stop" color="error">반납하기</v-btn>
-      </div>
+      <v-layout>
+        <v-flex
+          xs12
+        >
+          <v-btn @click.prevent="start" color="success" dark style="background: aquamarine">사용하기</v-btn>
+        </v-flex>
+        <v-flex
+          xs12
+        >
+          <v-btn @click.prevent="stop" color="error">반납하기</v-btn>
+        </v-flex>
+      </v-layout>
     </div>
   </div>
 </template>
@@ -30,17 +39,6 @@ export default {
     return {
       isUsed: true,
       valid: false,
-      firstname: '',
-      lastname: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => v.length <= 10 || 'Name must be less than 10 characters'
-      ],
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+/.test(v) || 'E-mail must be valid'
-      ]
     }
   },
   computed: {

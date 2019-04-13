@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <v-card width="400px" height="300px" flat>
-      <router-view></router-view>
-      <BottomNavBar></BottomNavBar>
-    </v-card>
-  </div>
+  <v-app>
+    <div>
+      <v-card width="400px" height="300px" flat color="">
+        <router-view></router-view>
+        <BottomNavBar></BottomNavBar>
+      </v-card>
+    </div>
+  </v-app>
 </template>
 
 <script>
