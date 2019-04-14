@@ -30,39 +30,39 @@
   <!--  </v-container>-->
   <v-card
     class="hide-overflow"
-    color="purple lighten-1"
+    color="indigo lighten-1"
     dark
   >
     <v-toolbar
       card
-      color="purple"
+      color="indigo"
     >
-      <v-icon>mdi-account</v-icon>
-      <v-toolbar-title class="font-weight-light">User Profile</v-toolbar-title>
+      <v-icon>settings</v-icon>
+      <v-toolbar-title class="font-weight-light">Settings</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        color="purple darken-3"
+        color="indigo"
         fab
         small
         @click="isEditing = !isEditing"
       >
-        <v-icon v-if="isEditing">mdi-close</v-icon>
-        <v-icon v-else>mdi-pencil</v-icon>
+        <v-icon v-if="isEditing">lock_open</v-icon>
+        <v-icon v-else>lock</v-icon>
       </v-btn>
     </v-toolbar>
     <v-card-text>
       <v-text-field
         :disabled="!isEditing"
         color="white"
-        label="Name"
+        label="secret Key"
       ></v-text-field>
       <v-autocomplete
         :disabled="!isEditing"
         :items="states"
         :filter="customFilter"
         color="white"
-        item-text="name"
-        label="State"
+        item-text="email"
+        label="email"
       ></v-autocomplete>
     </v-card-text>
     <v-divider></v-divider>
@@ -83,7 +83,7 @@
       bottom
       left
     >
-      Your profile has been updated
+      정보가 일치하지 않습니다
     </v-snackbar>
   </v-card>
 </template>
@@ -128,18 +128,15 @@ export default {
       isEditing: null,
       model: null,
       states: [
-        { name: 'Florida', abbr: 'FL', id: 1 },
-        { name: 'Georgia', abbr: 'GA', id: 2 },
-        { name: 'Nebraska', abbr: 'NE', id: 3 },
-        { name: 'California', abbr: 'CA', id: 4 },
-        { name: 'New York', abbr: 'NY', id: 5 }
-      ]
+        { email: 'wodn4131@daou.co.kr', name: '김재우', id: 1 },
+        { email: 'supreme@daou.co.kr', name: '한대호', id: 2 },
+        { email: 'dahye@daou.co.kr', name: '김다혜', id: 3 }
+      ],
     }
   },
-
   methods: {
     customFilter (item, queryText, itemText) {
-      const textOne = item.name.toLowerCase()
+      const textOne = item.email.toLowerCase()
       const textTwo = item.abbr.toLowerCase()
       const searchText = queryText.toLowerCase()
 
@@ -149,7 +146,7 @@ export default {
     save () {
       this.isEditing = !this.isEditing
       this.hasSaved = true
-    }
-  }
+    },
+  },
 }
 </script>

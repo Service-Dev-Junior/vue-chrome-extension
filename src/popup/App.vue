@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div>
-      <v-card width="400px" height="300px" flat color="">
+      <v-card width="400px" height="330px" flat>
         <router-view></router-view>
         <BottomNavBar></BottomNavBar>
       </v-card>
